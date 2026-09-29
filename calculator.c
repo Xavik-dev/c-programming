@@ -7,7 +7,7 @@ int main(){
     double num2 = 0.0;
     double result = 0.0;
 
-    printf("CALCULATOR\n");
+    printf("SIMPLE CALCULATOR\n");
 
     printf("Enter the value of num1: ");
     scanf("%lf", &num1);
