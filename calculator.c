@@ -29,7 +29,12 @@ int main(){
             result = num1 * num2;
             break;
         case '/':
-            result = num1 / num2;
+            if(num2==0){
+                printf("You cant divide with Zero\n");
+            }
+            else{
+                result = num1 / num2;
+            }
             break;
     }
 

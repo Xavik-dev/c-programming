@@ -1,26 +1,28 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<stdbool.h>
 
 int main(){
+    float price = 10.00;
+    bool isstudent = false; //10% discount
+    bool issenior = false; //20% discount
 
-    int choice = 0;
-    float kilograms = 0.0f;
-    float pounds = 0.0f;
-
-    printf("Weight converter\n");
-    printf("1. kilograms to pounds\n");
-    printf("2. pounds to kilograms");
-    printf("Enter your choicec(1 or 2): ");
-    scanf("%d", &choice);
-
-    if(choice == 1){
-        printf("Enter your weight in kilograms: ");
-        scanf("%f", &kilograms);  
-    }
-    else if(choice == 2){
-        printf("ENter your weight in pounds: ");
-        scanf("%f", &pounds);
+    if(isstudent){
+        if(issenior){
+            printf("you get a student discount of 10%\n");
+            printf("you get a senior discount of 20%\n");
+            price = price * 0.7;
+        }
+        else{
+            printf("you get a student discount of 10%\n");
+            price = price * 0.9;      
+        }
     }
     else{
-        printf("Invalide choice!, Please enter 1 or 2");
+        if(issenior){
+            printf("you get a senior discount of 20%\n");
+            price = price * 0.8;
     }
+}
+    printf("The final price is: $%.2f\n", price);
+    return 0;
 }
